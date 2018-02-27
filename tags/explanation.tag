@@ -1,13 +1,21 @@
-<Grammar>
-  <div each = {item, index in grammarData}>
-		<div class="grammar">
-      <h5>Please select the following to learn more about new grammar and vocabulary: )</h5>
-			<h5>{ item.grammar}</h5>
-			<div class="form-check form-check-inline" each= { i in item }>
-			  <input class="form-check-input" type="checkbox" name={"grammar" + } id={index + i} value={i} ref = {"question" + index}>
-			  <label class="form-check-label" for={index + i}>{ i }</label>
+<Explanation>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <ul>
+          <li each={ items in explanation}>
+              <label class={ completed: done }>
+                <input type="checkbox" checked={ done } onclick={ parent.toggle }> {items in explanation}
+              </label>
+          </li>
+      </ul>
+      <button type="button" onclick={showExplanation}>Submit</button>
+      <div if {completed:done}>
+        <ul>
+          <li each={items in newExplanation}></li>
+	      </ul>
 			</div>
 		</div>
 	</div>
 
-</Grammar>
+</Explanation>
