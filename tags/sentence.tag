@@ -6,12 +6,12 @@
 		<input type="radio" name={ sentenceItem.id } value={ sentenceItem.answer } onclick={ setAnswer }>{ choice }</input>
 	</label>
   <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
-  <h4 id="response" style="display: none">{ replies }</h4>
+  <h4 id="response" style="display: none" >{ sentenceItem.replies }</h4>
   </div>
 
   <script>
   var that = this;
-  
+
   		setAnswer(e) {
   			this.userAnswer = e.item.choice;
   			if (this.userAnswer == this.sentenceItem.answer) {
@@ -22,6 +22,7 @@
   		}
 
       showResponse() {
+        // console.log()
            document.getElementById("response").style.display ="block";
        }
   </script>
