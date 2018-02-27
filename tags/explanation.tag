@@ -18,11 +18,4 @@
 		</div>
 	</div>
 
-  <script>
-  this.items=opts.items
-  function showExplanation() {
-    var newArray=[];
-    if {}
-  }
-
 </Explanation>
