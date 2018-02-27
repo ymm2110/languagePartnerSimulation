@@ -23,6 +23,7 @@
 					<p each = {i in explanations} class="explanations">
 						{ i }
 					</p>
+					<button type="button" onclick={showExplanation}>Submit</button>
 				</explanation>
 			</div>
 		</div>
