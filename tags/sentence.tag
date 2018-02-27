@@ -1,13 +1,32 @@
 <sentence>
 
-  <div each = {item, index in sentenceData}>
-		<div class="sentence">
-			<h5>{ item.sentence }</h5>
-			<div class="form-check form-check-inline" each= { i in item.options }>
-			  <input class="form-check-input" type="radio" name={"question" + index} id={index + i} value={i} ref = {"question" + index}>
-			  <label class="form-check-label" for={index + i}>{ i }</label>
-			</div>
-		</div>
-	</div>
+  <p>{ sentenceIndex.question }</p>
+  <div class="">
+    <label each={ choice in sentenceIndex.choices }>
+		<input type="radio" name={ sentenceIndex.id } value={ sentenceIndex.reply } onclick={ setAnswer }></input> { reply }
+	</label>
+  </div>
+
+  <script>
+  var that = this;
+  		console.log('question.tag');
+  		console.log(this);
+
+  		setAnswer(e) {
+  			this.userAnswer = e.item.choice;
+  			console.log(this.userAnswer);
+  			if (this.userAnswer == this.sentenceIndex.reply) {
+  				this.quizItem.isCorrect = true;
+  			} else {
+  				this.quizItem.isCorrect = false;
+  			}
+  		}
+  </script>
+
+  <style>
+    :scope {
+      display: block;
+    }
+  </style>
 
 </sentence>
