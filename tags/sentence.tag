@@ -1,26 +1,29 @@
 <sentence>
 
-  <p>{ sentenceIndex.question }</p>
+  <h3>{ sentenceItem.question }</h3>
   <div class="">
-    <label each={ choice in sentenceIndex.choices }>
-		<input type="radio" name={ sentenceIndex.id } value={ sentenceIndex.reply } onclick={ setAnswer }></input> { reply }
+    <label each={ choice in sentenceItem.choices }>
+		<input type="radio" name={ sentenceItem.id } value={ sentenceItem.answer } onclick={ setAnswer }>{ choice }</input>
 	</label>
+  <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
+  <h4 id="response" style="display: none">{ replies }</h4>
   </div>
 
   <script>
   var that = this;
-  		console.log('question.tag');
-  		console.log(this);
-
+  
   		setAnswer(e) {
   			this.userAnswer = e.item.choice;
-  			console.log(this.userAnswer);
-  			if (this.userAnswer == this.sentenceIndex.reply) {
-  				this.quizItem.isCorrect = true;
+  			if (this.userAnswer == this.sentenceItem.answer) {
+  				this.sentenceItem.isCorrect = true;
   			} else {
-  				this.quizItem.isCorrect = false;
+  				this.sentenceItem.isCorrect = false;
   			}
   		}
+
+      showResponse() {
+           document.getElementById("response").style.display ="block";
+       }
   </script>
 
   <style>

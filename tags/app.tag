@@ -3,16 +3,14 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 offset-md-2">
+			<div class="col-8 offset-2">
 				<h1>Language Learning Partner Simulation</h1>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-4 offset-md-4">
-				<sentence each={ sentenceIndex in sentenceGrammar }></sentence>
-				<button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
-				<h4 id="response" style="display: none">{ sentenceIndex.reply }</h4>
+			<div class="col-4 offset-4">
+				<sentence each={ sentenceItem in sentenceGrammar }></sentence>
 			</div>
     </div>
 
@@ -35,26 +33,26 @@
   var that = this;
   this.sentenceGrammar = [
 			{
+				id: "question1",
 				question: "你闲时都喜欢干些什么呢？what do you like to do during your spare time?",
 				choices: [
 					"我啊，我的兴趣爱好很多哦, 在没有课的时候，我喜欢看书和户外运动。Me, I have a lot of hobbies. When I don’t have class, I like reading and outdoor sports.",
 					"我喜欢交朋友，所以我有空就和朋友一起去吃饭或者去酒吧。I like to hang out with friends. So when I have time, I'll go out with my friends to resturants or bars",
 				],
-        reply: "好巧啊！我也是.What a coincidence! Mine is the same."
+				answer: "我啊，我的兴趣爱好很多哦, 在没有课的时候，我喜欢看书和户外运动。Me, I have a lot of hobbies. When I don’t have class, I like reading and outdoor sports.",
+        replies: "好巧啊！我也是.What a coincidence! Mine is the same."
       },
       {
+				id: "question2",
 				question: "好久没见你了，这几天忙什么呢? Long time no see. What have you been up to these past few days?",
 				choices: [
 					"那还用问, 当然是看冬奥会了，最近有争议比赛太多了。Of course I'm watching the Winter Olympics. There's so many controversial races recently.",
 					"我正在实习，还有很多作业要写，教程要看。I'm doing an internship, and I also got a lot of homeworks to do, and tutorials to watch.",
 				],
-        reply: "希望你能享受你正在干的事！Hope you're enjoying what you's doing!"
+				answer: "那还用问, 当然是看冬奥会了，最近有争议比赛太多了。Of course I'm watching the Winter Olympics. There's so many controversial races recently.",
+        replies: "希望你能享受你正在干的事！Hope you're enjoying what you's doing!"
       }
     ];
-
-	 showResponse() {
-		    document.getElementById("response").style.display ="block";
-		}
 
   this.grammaTopic = [
     {
@@ -77,6 +75,12 @@
 	</script>
 
 	<style>
+
+	body {
+  font: 400 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #000;
+}
 	</style>
 
 
