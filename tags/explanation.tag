@@ -3,9 +3,9 @@
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <ul>
-          <li each={ items in explanation}>
+          <li each={ items.word in explanation}>
               <label class={ completed: done }>
-                <input type="checkbox" checked={ done } onclick={ parent.toggle }> {items in explanation}
+                <input type="checkbox" checked={ done } onclick={ parent.toggle }> {items.word in explanation}
               </label>
           </li>
       </ul>
@@ -19,10 +19,6 @@
 	</div>
 
   <script>
-  this.items=opts.items
-  function showExplanation() {
-    var newArray=[];
-    if {}
-  }
+
 
 </Explanation>
