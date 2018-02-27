@@ -6,13 +6,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+
     <!-- place the custom tag anywhere inside the body -->
-    <sentence></sentence>
+    <app></app>
+
     <!-- include the tag -->
-    <script type="riot/tag" src="sentence.tag"></script>
+    <script type="riot/tag" src="tags/app.tag"></script>
+    <script type="riot/tag" src="tags/sentence.tag"></script>
+    <script type="riot/tag" src="tags/explanation.tag"></script>
+
     <!-- include riot.js -->
     <script src="https://cdn.jsdelivr.net/npm/riot@3.8/riot+compiler.min.js"></script>
+    
     <!-- mount the tag -->
-    <script>riot.mount('sentence')</script>
+    <script>riot.mount('*')</script>
   </body>
 </html>
