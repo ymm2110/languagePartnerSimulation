@@ -44,7 +44,7 @@
   this.grammaTopic = [
     {
       topic: [
-				"闲时，spare time",
+				"闲时(spare time) is a adjec",
 				"干什么，do something",
         "在...的时候，when",
 				"有空的时候，when I have time",
