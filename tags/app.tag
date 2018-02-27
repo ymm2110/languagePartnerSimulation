@@ -44,8 +44,17 @@
   this.grammaTopic = [
     {
       topic: [
-        "在，when",
-        ""
+				"闲时，spare time",
+				"干什么，do something",
+        "在...的时候，when",
+				"有空的时候，when I have time",
+				"巧／巧合，coincidence",
+        "忙，busy doing something",
+				"那还用问，of course",
+				"争议的，controversial",
+				"实习，internship",
+				"有...要做, have something to do",
+				"享受做某事，enjoy doing something"
       ]
     }
   ];
