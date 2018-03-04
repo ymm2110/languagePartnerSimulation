@@ -2,19 +2,19 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-10 offset-1">
+			<div class="">
 				<h1>Language Learning Partner Simulation</h1>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-4 offset-4">
-				<sentence each={ sentenceItem in sentenceGrammar }></sentence>
+			<div>
+				<sentence class = "question" each={ sentenceItem in sentenceGrammar }></sentence>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-6 offset-md-3">
+			<div class="">
 				<explanation></explanation>
 			</div>
 		</div>
@@ -67,8 +67,20 @@
 			padding: 10px;
 			text-transform: uppercase;
 			/* text-align: center; */
-			/* font-family: monospace; */
+			font-family: monospace;
 		}
+
+		h1 {
+			text-align: center;
+		}
+
+		.question {
+			margin-top: 20px;
+			border: 0.5px solid #CCC;
+			border-radius: 5px;
+			padding: 20px;
+		}
+
 	</style>
 
 </app>

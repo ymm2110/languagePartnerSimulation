@@ -1,13 +1,13 @@
 <sentence>
 
   <h3>{ sentenceItem.question }</h3>
-  <div class="">
+  <div class="options">
     <label each={ choice in sentenceItem.choices }>
-		  <input type="radio" name={ sentenceItem.id } value={ choice } onclick={ setAnswer }>{ choice }</input>
+		  <input type="radio" name={ sentenceItem.id } value={ choice } onclick={ setAnswer }>  { choice } </input>
 	  </label>
-  <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
-  <p if = { this.sentenceItem.isCorrect && this.sentenceItem.checked }> { reply } </p>
-  <p if = { !this.sentenceItem.isCorrect && this.sentenceItem.checked }>Please Try Again!</p>
+    <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
+    <p if = { this.sentenceItem.isCorrect && this.sentenceItem.checked } class = "replies"> { reply } </p>
+    <p if = { !this.sentenceItem.isCorrect && this.sentenceItem.checked } class = "try">Please Try Again!</p>
   </div>
 
   <script>
@@ -38,6 +38,26 @@
   <style>
     :scope {
       display: block;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+
+    .options {
+      margin-top: 10px;
+    }
+
+    .try {
+      color: red;
+    }
+
+    .replies {
+      color: green;
     }
   </style>
 
