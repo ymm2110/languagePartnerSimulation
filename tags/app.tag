@@ -66,7 +66,6 @@
 			display: block;
 			padding: 10px;
 			text-transform: uppercase;
-			/* text-align: center; */
 			font-family: monospace;
 		}
 
