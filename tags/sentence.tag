@@ -3,18 +3,27 @@
   <h3>{ sentenceItem.question }</h3>
   <div class="">
     <label each={ choice in sentenceItem.choices }>
-		<input type="radio" name={ sentenceItem.id } value={ sentenceItem.answer } onclick={ setAnswer }>{ choice }</input>
-	</label>
+		  <input type="radio" name={ sentenceItem.id } value={ choice } onclick={ setAnswer }>{ choice }</input>
+	  </label>
   <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
-  <h4 id="response" style="display: none" >{ sentenceItem.replies }</h4>
+  <p if = { this.sentenceItem.isCorrect && this.sentenceItem.checked }> { reply } </p>
+  <p if = { !this.sentenceItem.isCorrect && this.sentenceItem.checked }>Please Try Again!</p>
   </div>
 
   <script>
-  var that = this;
+   // var that = this;
+   this.sentenceItem.checked = false;
+   this.sentenceItem.isCorrect = false;
+   this.reply = this.sentenceItem.replies;
 
-  		setAnswer(e) {
-  			this.userAnswer = e.item.choice;
-  			if (this.userAnswer == this.sentenceItem.answer) {
+  		setAnswer(event) {
+        var RightAnswer = event.target.value;
+        var answerNumber = this.sentenceItem.answer-1;
+        var InputAnswer = this.sentenceItem.choices[answerNumber];
+        this.sentenceItem.checked = false;
+
+        console.log(InputAnswer);
+  			if (RightAnswer == InputAnswer) {
   				this.sentenceItem.isCorrect = true;
   			} else {
   				this.sentenceItem.isCorrect = false;
@@ -22,8 +31,7 @@
   		}
 
       showResponse() {
-        // console.log()
-           document.getElementById("response").style.display ="block";
+       this.sentenceItem.checked = true;
        }
   </script>
 
