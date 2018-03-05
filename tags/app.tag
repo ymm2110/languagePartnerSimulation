@@ -2,7 +2,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="">
+			<div class="col-10 offset-1">
 				<h1>Language Learning Partner Simulation</h1>
 			</div>
 		</div>
@@ -27,10 +27,12 @@
 				id: "question1",
 				question: "你闲时都喜欢干些什么呢？what do you like to do during your spare time?",
 				choices: [
-					"我啊，我的兴趣爱好很多哦, 在没有课的时候，我喜欢看书和户外运动。Me, I have a lot of hobbies. When I don’t have class, I like reading and outdoor sports.", "我喜欢交朋友，所以我有空就和朋友一起去吃饭或者去酒吧。I like to hang out with friends. So when I have time, I'll go out with my friends to resturants or bars"
+					"我啊，我的兴趣爱好很多哦, 在没有课的时候，我喜欢看书和户外运动。Me, I have a lot of hobbies. When I don’t have class, I like reading and outdoor sports.",
+					"我喜欢交朋友，所以我有空就和朋友一起去吃饭或者去酒吧。I like to hang out with friends. So when I have time, I'll go out with my friends to resturants or bars"
 				],
 				answer: 1,
-				replies: "好巧啊！我也是.What a coincidence! Mine is the same."
+				replies: ["好巧啊！我也很喜欢运动。冬天里每个周末我都去滑雪.What a coincidence! I love sports too. I go ski every weekend during the winter", "那你喜欢什么类型的酒吧呢？我知道纽约有个很好的德国店。What type of bars do you like? I know a great German place in New York. "
+				]
 			}, {
 				id: "question2",
 				question: "好久没见你了，这几天忙什么呢? Long time no see. What have you been up to these past few days?",
@@ -38,7 +40,8 @@
 					"那还用问, 当然是看冬奥会了，最近有争议比赛太多了。Of course I'm watching the Winter Olympics. There's so many controversial races recently.", "我正在实习，还有很多作业要写，教程要看。I'm doing an internship, and I also got a lot of homeworks to do, and tutorials to watch."
 				],
 				answer: 1,
-				replies: "希望你能享受你正在干的事！Hope you're enjoying what you's doing!"
+				replies:  ["是啊，你看到男子五千米比赛加拿大队在领奖台的表现了嘛？Yeah, did you see Canadian’s performance at the podium during men’s short-track speedskating 5,000m?","希望你能享受忙碌的时光！Hope you're enjoying the busy schedule!"
+				]
 			}
 		];
 
@@ -65,12 +68,17 @@
 		:scope {
 			display: block;
 			padding: 10px;
-			text-transform: uppercase;
 			font-family: monospace;
+			font-size: 1.3em;
 		}
 
 		h1 {
 			text-align: center;
+			text-transform: uppercase;
+			border: 2px solid lightblue;
+			background-color: lightblue;
+			border-radius: 5px;
+			padding: 10px;
 		}
 
 		.question {

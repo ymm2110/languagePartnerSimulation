@@ -5,16 +5,19 @@
     <label each={ choice in sentenceItem.choices }>
 		  <input type="radio" name={ sentenceItem.id } value={ choice } onclick={ setAnswer }>  { choice } </input>
 	  </label>
+    <br>  
     <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
-    <p if = { this.sentenceItem.isCorrect && this.sentenceItem.checked } class = "replies"> { reply } </p>
-    <p if = { !this.sentenceItem.isCorrect && this.sentenceItem.checked } class = "try">Please Try Again!</p>
+    <!-- <button class = "btn btn-primary" type="button" onclick={ showTranslation }>Show Translation</button> -->
+    <p if = { this.sentenceItem.isCorrect && this.sentenceItem.checked } class = "replies"> { replyFirst } </p>
+    <p if = { !this.sentenceItem.isCorrect && this.sentenceItem.checked } class = "replies">{ replySecond }</p>
   </div>
 
   <script>
    // var that = this;
    this.sentenceItem.checked = false;
    this.sentenceItem.isCorrect = false;
-   this.reply = this.sentenceItem.replies;
+   this.replyFirst = this.sentenceItem.replies[0];
+   this.replySecond = this.sentenceItem.replies[1];
 
   		setAnswer(event) {
         var RightAnswer = event.target.value;
@@ -50,10 +53,6 @@
 
     .options {
       margin-top: 10px;
-    }
-
-    .try {
-      color: red;
     }
 
     .replies {
