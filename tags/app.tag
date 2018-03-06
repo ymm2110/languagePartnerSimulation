@@ -37,7 +37,8 @@
 				replies: [
 					"好巧啊！我也很喜欢运动。冬天里每个周末我都去滑雪.What a coincidence! I love sports too. I go ski every weekend during the winter",
 					"那你喜欢什么类型的酒吧呢？我知道纽约有个很好的德国店。What type of bars do you like? I know a great German place in New York. "
-				]
+				],
+				url: "Ri8dLkmCRRs"
 			}, {
 				id: "question2",
 				question: "好久没见你了，这几天忙什么呢? Long time no see. What have you been up to these past few days?",
@@ -47,9 +48,10 @@
 				],
 				answer: 1,
 				replies:  [
-					"是啊，你看到男子五千米比赛加拿大队在领奖台的表现了嘛？Yeah, did you see Canadian’s performance at the podium during men’s short-track speedskating 5,000m?",
+					"是啊，你看男子五千米比赛了嘛？Yeah, did you watch men’s short-track speedskating 5,000m?",
 					"希望你能享受忙碌的时光！Hope you're enjoying the busy schedule!"
-				]
+				],
+				url: "LbgV277znjY"
 			}
 		];
 
@@ -78,25 +80,27 @@
 			padding: 10px;
 			font-family: monospace;
 			font-size: 1.3em;
+			color:#3F2B36;
 		}
 
 		h1 {
 			text-align: center;
 			text-transform: uppercase;
 			color:white;
-			border: 2px solid blue;
-			background-color: blue;
+			border: 2px solid #4A225D;
+			background-color: #4A225D;
 			border-radius: 5px;
 			padding: 10px;
 		}
 
 		.introduction{
 			margin-top: 20px;
-			border: 2px solid lightblue;
-			background-color: lightblue;
+			border: 2px solid #33A6B8;
+			background-color: #33A6B8;
 			border-radius: 5px;
 			padding: 20px;
 			font-size: 1em;
+			color:white;
 		}
 
 		.question {
