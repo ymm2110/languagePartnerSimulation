@@ -61,11 +61,12 @@
 				id:"explaination1",
 				title: "Words Help for frist conversation",
 				words: ["闲时(spare time)","干什么(do something)","在...的时候(when)","有空的时候(when I have time) ","巧／巧合(coincidence)" ],
-				explainations: ["闲时(spare time) is a adverb that people use commonly in daily formal conversation. It is short for 闲的时候, which can be used in formal settings.",
-				"干什么(do something) is a verbal collocation that frequently used in both formal and informal conversations. It covers basically all the verbs and has neither negative or positive tone.",
-				"在...的时候(when) is a adverb that people use to refer time. For example, 在闲的时候(in spare time).",
-				"有空的时候(when I have time) is a adverb collocation that consists of when and have (spare) time. It is an informal way to refer to spare time.",
-				"巧／巧合(coincidence) is a word which means people do same thing as others or do things at the same time with others."]
+				explainations: [
+					"闲时(spare time) is a adverb that people use commonly in daily formal conversation. It is short for 闲的时候, which can be used in formal settings.",
+					"干什么(do something) is a verbal collocation that frequently used in both formal and informal conversations. It covers basically all the verbs and has neither negative or positive tone.",
+					"在...的时候(when) is a adverb that people use to refer time. For example, 在闲的时候(in spare time).",
+					"有空的时候(when I have time) is a adverb collocation that consists of when and have (spare) time. It is an informal way to refer to spare time.",
+					"巧／巧合(coincidence) is a word which means people do same thing as others or do things at the same time with others."]
 			},{
 				id:"explaination2",
 				title: "Words Help for second conversation",
