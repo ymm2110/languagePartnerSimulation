@@ -17,7 +17,6 @@
   </div>
 
   <script>
-   // var that = this;
    this.sentenceItem.checked = false;
    this.sentenceItem.isFirst = false;
    this.needGrammarVideo = false;
@@ -26,30 +25,27 @@
    this.replyFirst = this.sentenceItem.replies[0];
    this.replySecond = this.sentenceItem.replies[1];
 
+   setAnswer(event) {
+     var RightAnswer = event.target.value;
+     var answerNumber = this.sentenceItem.answer-1;
+     var InputAnswer = this.sentenceItem.choices[answerNumber];
+     this.sentenceItem.checked = false;
 
+     console.log(InputAnswer);
+  	  if (RightAnswer == InputAnswer) {
+  	     this.sentenceItem.isFirst = true;
+  	  } else {
+  			 this.sentenceItem.isFirst = false;
+  	  }
+   }
 
+   showResponse() {
+     this.sentenceItem.checked = true;
+   }
 
-  		setAnswer(event) {
-        var RightAnswer = event.target.value;
-        var answerNumber = this.sentenceItem.answer-1;
-        var InputAnswer = this.sentenceItem.choices[answerNumber];
-        this.sentenceItem.checked = false;
-
-        console.log(InputAnswer);
-  			if (RightAnswer == InputAnswer) {
-  				this.sentenceItem.isFirst = true;
-  			} else {
-  				this.sentenceItem.isFirst = false;
-  			}
-  		}
-
-      showResponse() {
-       this.sentenceItem.checked = true;
-       }
-
-       showGrammaVideo(){
-           this.needGrammarVideo = true;
-       }
+   showGrammaVideo(){
+     this.needGrammarVideo = true;
+   }
   </script>
 
   <style>

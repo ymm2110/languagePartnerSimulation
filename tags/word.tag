@@ -16,7 +16,7 @@
 
     this.optionIndex = ''; // this could be get after the button being clicked
 
-    this.showWordsExplaination  = function() {
+    showWordsExplaination () {
       console.log("haha")
     }
   </script>
