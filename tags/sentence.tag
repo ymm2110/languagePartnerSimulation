@@ -11,7 +11,7 @@
     <!-- <button class = "btn btn-primary" type="button" onclick={ showTranslation }>Show Translation</button> -->
     <p if = { this.sentenceItem.isFirst && this.sentenceItem.checked } class = "replies"> { replyFirst } </p>
     <p if = { !this.sentenceItem.isFirst && this.sentenceItem.checked } class = "replies">{ replySecond }</p>
-    <p if = { this.needGrammarVideo } >
+    <p class = "videoWrapper" if = { this.needGrammarVideo } >
       <iframe width="560" height="315" src="https://www.youtube.com/embed/{urlGrammarVideo}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </p>
   </div>
@@ -67,6 +67,21 @@
 
     .replies {
       color: green;
+    }
+
+    .videoWrapper {
+  	position: relative;
+  	padding-bottom: 56.25%; /* 16:9 */
+  	padding-top: 25px;
+  	height: 0;
+    }
+
+    .videoWrapper iframe {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
     }
   </style>
 
