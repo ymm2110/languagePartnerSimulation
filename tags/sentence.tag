@@ -8,7 +8,7 @@
     <br>
     <button class = "btn btn-primary" type="button" onclick={ showResponse }>Reply</button>
     <button class="btn btn-primary" type="button" onclick={ showGrammaVideo }>Grammar Video</button>
-    <!-- <button class = "btn btn-primary" type="button" onclick={ showTranslation }>Show Translation</button> -->
+  
     <p if = { this.sentenceItem.isFirst && this.sentenceItem.checked } class = "replies"> { replyFirst } </p>
     <p if = { !this.sentenceItem.isFirst && this.sentenceItem.checked } class = "replies">{ replySecond }</p>
     <p class = "videoWrapper" if = { this.needGrammarVideo } >
@@ -31,7 +31,7 @@
      var InputAnswer = this.sentenceItem.choices[answerNumber];
      this.sentenceItem.checked = false;
 
-     console.log(InputAnswer);
+     // console.log(InputAnswer);
   	  if (RightAnswer == InputAnswer) {
   	     this.sentenceItem.isFirst = true;
   	  } else {
